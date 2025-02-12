@@ -7,7 +7,7 @@
         <script src = "https://cdn.tailwindcss.com"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">             <!-- for google fonts API-->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Molle&family=Qahiri&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Molle&family=Qahiri&display=swap" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -24,15 +24,20 @@
             }
         </script>
         <style>
-            .qahiri-regular {
+            .qahiri-regular {                     /* font for name */
             font-family: "Qahiri", serif;
             font-weight: 400;
             font-style: normal;
         }
-        .molle-regular-italic {
+        .molle-regular-italic {                    /* font for chapter text */
             font-family: "Molle", serif;
             font-weight: 400;
             font-style: italic;
+        }
+        .jomhuria-regular {
+            font-family: "Jomhuria", serif;        /* font for section headers */
+            font-weight: 400;
+            font-style: normal;
         }
         </style>
     </head>
@@ -54,8 +59,24 @@
                     <div class = "absolute top-1/8 -translate-y-1/2 -rotate-90 text-[#0A0936] tracking-widest text-3xl origin-right font-bold molle-regular-italic">
                         Chapters
                     </div>
+
+                    <div class = "grid grid-cols-4 gap-8 ml-8 jomhuria-regular">
+                        <div class = "relative">
+                            <img src = "images/icons8-person-100.svg" class = "absolute -top-14 left-1/2 transform -translate-x-1/2 w-12 h-12">
+                            <div class = "rounded-2xl bg-[#011f48] p-6 h-48 flex flex-col justify-center">
+                                <div class = "text-[#C5C2BC] text-6xl font-bold">
+                                    I. <br> ABOUT <br> ME
+                                </div> 
+                            </div>
+                        </div>
+
+
+                        
+                    </div>
                 </div>
-            <p></p>
+
+
+
             </div>
 
         </header>
