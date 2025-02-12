@@ -72,7 +72,7 @@ document.getElementById("yarndings-m").addEventListener("mouseenter", function()
     document.getElementById("yarndings-m").textContent = "actual Yarndings translation *"
     document.getElementById("yarndings-m").classList.remove('text-sm')
     document.getElementById("yarndings-m").classList.add('text-xxxs')
-    setTimeout(function(){}, 1500)
+    setTimeout(function(){}, 2500)
 })
 
 document.getElementById("yarndings-m").addEventListener("mouseleave", function(){
@@ -80,7 +80,7 @@ document.getElementById("yarndings-m").addEventListener("mouseleave", function()
         document.getElementById("yarndings-m").textContent = "*"
         document.getElementById("yarndings-m").classList.remove('text-xxxs')
         document.getElementById("yarndings-m").classList.add('text-sm')
-    }, 1500)
+    }, 2500)
 })
 
 document.getElementById("urdu-m").addEventListener("mouseenter", function(){
@@ -133,7 +133,7 @@ document.querySelectorAll('.group').forEach(header => {     // cool bounce anima
 // })
 
 
-document.querySelectorAll('.grid > div').forEach(box => {
+document.querySelectorAll('.grid > a').forEach(box => {
     box.addEventListener('mouseenter', () => {
         box.classList.add('scale-105', 'transition-transform');
     })
