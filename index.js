@@ -20,13 +20,63 @@ lName.addEventListener("mouseleave", function(){
     lName.textContent = "عثمانی"
 })
 
+document.getElementById("git").addEventListener("mouseenter", function(){
+    document.getElementById("git").classList.add('scale-120', 'transition-transform')
+    document.getElementById("git").classList.add('text-[#6487B1]', 'transition-colors')
+})
+
+document.getElementById("git").addEventListener("mouseleave", function(){
+    document.getElementById("git").classList.remove('scale-120', 'transition-transform')
+    document.getElementById("git").classList.remove('text-[#6487B1]', 'transition-colors')
+})
+
+document.getElementById("lnk").addEventListener("mouseenter", function(){
+    document.getElementById("lnk").classList.add('scale-120', 'transition-transform')
+    document.getElementById("lnk").classList.add('text-[#6487B1]', 'transition-colors')
+})
+
+document.getElementById("lnk").addEventListener("mouseleave", function(){
+    document.getElementById("lnk").classList.remove('scale-120', 'transition-transform')
+    document.getElementById("lnk").classList.remove('text-[#6487B1]', 'transition-colors')
+})
+
+document.getElementById("ml").addEventListener("mouseenter", function(){
+    document.getElementById("ml").classList.add('scale-120', 'transition-transform')
+    document.getElementById("ml").classList.add('text-[#6487B1]', 'transition-colors')
+})
+
+document.getElementById("ml").addEventListener("mouseleave", function(){
+    document.getElementById("ml").classList.remove('scale-120', 'transition-transform')
+    document.getElementById("ml").classList.remove('text-[#6487B1]', 'transition-colors')
+})
+
+
+
+document.getElementById("git").addEventListener("click", function(){
+    document.getElementById("git").classList.remove('scale-120', 'transition-transform')
+    document.getElementById("git").classList.remove('text-[#6487B1]', 'transition-colors')
+})
+
+document.getElementById("lnk").addEventListener("click", function(){
+    document.getElementById("lnk").classList.add('scale-120', 'transition-transform')
+    document.getElementById("lnk").classList.add('text-[#6487B1]', 'transition-colors')
+})
+
+document.getElementById("ml").addEventListener("click", function(){
+    document.getElementById("ml").classList.add('scale-120', 'transition-transform')
+    document.getElementById("ml").classList.add('text-[#6487B1]', 'transition-colors')
+})
+
+
+
+
 document.getElementById("yarndings-m").addEventListener("mouseenter", function(){
     document.getElementById("yarndings-m").textContent = "actual Yarndings translation *"
     document.getElementById("yarndings-m").classList.remove('text-sm')
     document.getElementById("yarndings-m").classList.add('text-xxxs')
 })
 
-document.getElementById("yarndings-m").addEventListener("mouseenter", function(){
+document.getElementById("yarndings-m").addEventListener("mouseleave", function(){
     document.getElementById("yarndings-m").textContent = "*"
     document.getElementById("yarndings-m").classList.remove('text-xxxs')
     document.getElementById("yarndings-m").classList.add('text-sm')
@@ -41,18 +91,20 @@ document.querySelectorAll('.grid > div').forEach(box => {
     })
 })
 
-document.querySelectorAll('.flex-col > i').forEach(icon => {
-    icon.addEventListener('mouseenter', () => {
-        console.log("yo")
-        icon.classList.add('scale-105', 'transition-transform')
-        icon.classList.add('text-[#6487B1]', 'transition-colors')
-    })
-    icon.addEventListener('mouseleave', () => {
-        console.log("yo2")
-        icon.classList.remove('scale-105', 'transition-transform')
-        icon.classList.remove('text-[#6487B1]', 'transition-colors')
-    })
-})
+// document.querySelectorAll('.flex > span').forEach(icon => {               // not working for some odd reason
+//     icon.addEventListener('mouseenter', () => {
+//         console.log("yo")
+//         icon.classList.add('scale-105', 'transition-transform')
+//         icon.classList.add('text-[#6487B1]', 'transition-colors')
+//         console.log("yo again")
+//     })
+//     icon.addEventListener('mouseleave', () => {
+//         console.log("yo2")
+//         icon.classList.remove('scale-105', 'transition-transform')
+//         icon.classList.remove('text-[#6487B1]', 'transition-colors')
+//     })
+// })
+
 
 document.querySelectorAll('.grid > div').forEach(box => {
     box.addEventListener('mouseenter', () => {
@@ -73,6 +125,7 @@ document.querySelectorAll('.text-5xl > span').forEach(letter => {
         letter.classList.add('yarndings-20-regular')
     })
 })
+
 // document.querySelector("#audio").addEventListener("click", function(){
     
 // })
