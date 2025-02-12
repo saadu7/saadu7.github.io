@@ -7,17 +7,21 @@
         <script src = "https://cdn.tailwindcss.com"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">             <!-- for google fonts API-->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Molle&family=Qahiri&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Molle&family=Qahiri&family=Yarndings+20&family=Yeseva+One&display=swap" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
         <link rel="manifest" href="images/site.webmanifest">
+        <script src="https://unpkg.com/lucide@latest"></script>
         <script>
             tailwind.config = {        // to create custom class for the the pattern 
                 theme: {
                     extend: {
                         backgroundImage: {
                             'pattern': "url('images/oriental.png')",
+                        },
+                        fontSize: {
+                            'xxxs': '0.5rem', 
                         }
                     }
                 }
@@ -39,17 +43,35 @@
             font-weight: 400;
             font-style: normal;
         }
+        .yarndings-20-regular {
+            font-family: "Yarndings 20", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .yeseva-one-regular {
+            font-family: "Yeseva One", serif;
+            font-weight: 400;
+            font-style: normal;
+         }
         </style>
     </head>
     <body class = "bg-[#C5C2BC]">
         <header class = "p-8">
             <div class = "flex justify-between items-center mb-20">       <!-- name and title -->
                 <h1 class = "text-[#011f48] text-7xl font-bold qahiri-regular">saad <span class = "text-[#03396c]">usmani</span></h1>
-                <h1> Welcome</h1>
-                <h1 class = "text-[#6487B1] text-7xl font-bold qahiri-regular">
+
+                <div class = "relative">
+                    <p id = "yarndings-m" class = "text-[#011f48] text-sm yeseva-one-regular">*</p>
+                    <h1 class = "gap-8 text-white text-5xl yarndings-20-regular"> <span>w</span>&nbsp;<span>e</span>&nbsp;<span>l</span>&nbsp;<span>c</span>&nbsp;<span>o</span>&nbsp;<span>m</span>&nbsp;<span>e</span></h1>
+                </div>
+        
+                <h1 class = "text-[#6487B1] text-7xl font-bold hover:cursor-grab qahiri-regular">
                     <span id = "ur-fname">سعد </span> <span class = "text-[#005B96]" id = "ur-lname">عثمانی</span>
                 </h1>
             </div>
+
+            <br><br><br>
+
             <div class = "h-12 my-10 bg-pattern bg-repeat-x bg-auto" hidden></div>
 
             <div class = "flex justify-between items-center">  <!-- main section header -->
@@ -58,7 +80,7 @@
                         Chapters
                     </div>
 
-                    <div class = "grid grid-cols-4 gap-8 ml-8 jomhuria-regular">
+                    <div class = "grid grid-cols-4 gap-8 ml-8 hover:cursor-pointer jomhuria-regular">
                         <div class = "relative">
                             <img src = "images/icons8-person-100.svg" class = "absolute -top-14 left-1/2 transform -translate-x-1/2 w-12 h-12">
                             <div class = "rounded-2xl bg-[#011f48] p-6 h-48 flex flex-col justify-center">
@@ -98,8 +120,11 @@
                     </div>
                 </div>
 
-
-
+                <div class = "flex flex-col space-y-4 ml-8">
+                    <i data-lucide="github" class="w-6 h-6 text-[#0A0936] cursor-pointer"></i>
+                    <i data-lucide="linkedin" class="w-6 h-6 text-[#0A0936] cursor-pointer"></i>
+                    <i data-lucide="mail" class="w-6 h-6 text-[#0A0936] cursor-pointer"></i>
+                </div>
             </div>
 
         </header>
