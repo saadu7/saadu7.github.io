@@ -35,11 +35,20 @@
         <header class = "p-8">
             <div class = "flex justify-between items-center mb-20">
                 <h1 class = "text-[#011f48] text-7xl font-bold qahiri-regular">saad <span class = "text-[#03396c]">usmani</span></h1>
-                <h1 class = "text-[#6487B1] text-7xl font-bold qahiri-regular">سعد <span class = "text-[#005B96]">عثمانی</span></h1>
+                <button id = "audio">
+                    click me
+                </button>
+                <h1 class = "text-[#6487B1] text-7xl font-bold qahiri-regular">
+                    <span id = "ur-fname">سعد </span> <span class = "text-[#005B96]" id = "ur-lname">عثمانی</span>
+                </h1>
             </div>
-
             <div class = "h-12 my-10 bg-pattern bg-repeat-x bg-auto" hidden></div>
         </header>
+
+        <audio id="background-audio" autoplay loop controls>
+            <source src="audio/BLUE.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+          </audio>
         <script src = "index.js"></script>
     </body>
 </html>
