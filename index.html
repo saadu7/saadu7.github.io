@@ -7,7 +7,7 @@
         <script src = "https://cdn.tailwindcss.com"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">             <!-- for google fonts API-->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Molle&family=Qahiri&display=swap" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -29,23 +29,40 @@
             font-weight: 400;
             font-style: normal;
         }
+        .molle-regular-italic {
+            font-family: "Molle", serif;
+            font-weight: 400;
+            font-style: italic;
+        }
         </style>
     </head>
     <body class = "bg-[#C5C2BC]">
         <header class = "p-8">
-            <div class = "flex justify-between items-center mb-20">
+            <div class = "flex justify-between items-center mb-20">       <!-- name and title -->
                 <h1 class = "text-[#011f48] text-7xl font-bold qahiri-regular">saad <span class = "text-[#03396c]">usmani</span></h1>
                 <button id = "audio">
-                    click me
+                    .
                 </button>
                 <h1 class = "text-[#6487B1] text-7xl font-bold qahiri-regular">
                     <span id = "ur-fname">سعد </span> <span class = "text-[#005B96]" id = "ur-lname">عثمانی</span>
                 </h1>
             </div>
             <div class = "h-12 my-10 bg-pattern bg-repeat-x bg-auto" hidden></div>
+
+            <div class = "flex justify-between items-center">  <!-- main section header -->
+                <div class = "relative flex-grow">             <!-- chapters-->
+                    <div class = "absolute top-1/8 -translate-y-1/2 -rotate-90 text-[#0A0936] tracking-widest text-3xl origin-right font-bold molle-regular-italic">
+                        Chapters
+                    </div>
+                </div>
+            <p></p>
+            </div>
+
         </header>
 
-        <audio id="background-audio" autoplay loop controls>
+
+
+        <audio id="background-audio" autoplay loop controls hidden>
             <source src="audio/BLUE.mp3" type="audio/mp3">
             Your browser does not support the audio element.
           </audio>

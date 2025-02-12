@@ -18,3 +18,7 @@ lName.addEventListener("mouseenter", function(){
 lName.addEventListener("mouseleave", function(){
     lName.textContent = "عثمانی"
 })
+
+document.querySelector("#audio").addEventListener("click", function(){
+    
+})
