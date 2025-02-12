@@ -68,8 +68,6 @@ document.getElementById("ml").addEventListener("click", function(){
 })
 
 
-
-
 document.getElementById("yarndings-m").addEventListener("mouseenter", function(){
     document.getElementById("yarndings-m").textContent = "actual Yarndings translation *"
     document.getElementById("yarndings-m").classList.remove('text-sm')
@@ -90,6 +88,17 @@ document.querySelectorAll('.grid > div').forEach(box => {
         box.classList.remove('scale-105', 'transition-transform');
     })
 })
+
+document.querySelectorAll('.group').forEach(header => {     // cool bounce animation for the lil guy
+    header.addEventListener('mouseenter', () => {
+      const icon = header.querySelector('img');
+      icon.classList.add('animate-bounce');
+    });
+    header.addEventListener('mouseleave', () => {
+      const icon = header.querySelector('img');
+      icon.classList.remove('animate-bounce');
+    });
+  });
 
 // document.querySelectorAll('.flex > span').forEach(icon => {               // not working for some odd reason
 //     icon.addEventListener('mouseenter', () => {
