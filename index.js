@@ -72,12 +72,30 @@ document.getElementById("yarndings-m").addEventListener("mouseenter", function()
     document.getElementById("yarndings-m").textContent = "actual Yarndings translation *"
     document.getElementById("yarndings-m").classList.remove('text-sm')
     document.getElementById("yarndings-m").classList.add('text-xxxs')
+    setTimeout(function(){}, 1500)
 })
 
 document.getElementById("yarndings-m").addEventListener("mouseleave", function(){
-    document.getElementById("yarndings-m").textContent = "*"
-    document.getElementById("yarndings-m").classList.remove('text-xxxs')
-    document.getElementById("yarndings-m").classList.add('text-sm')
+    setTimeout(function(){
+        document.getElementById("yarndings-m").textContent = "*"
+        document.getElementById("yarndings-m").classList.remove('text-xxxs')
+        document.getElementById("yarndings-m").classList.add('text-sm')
+    }, 1500)
+})
+
+document.getElementById("urdu-m").addEventListener("mouseenter", function(){
+    document.getElementById("urdu-m").textContent = "name in native Urdu translated *"
+    document.getElementById("urdu-m").classList.remove('text-sm')
+    document.getElementById("urdu-m").classList.add('text-xxxs')
+    setTimeout(function(){}, 1500)
+})
+
+document.getElementById("urdu-m").addEventListener("mouseleave", function(){
+    setTimeout(function(){
+        document.getElementById("urdu-m").textContent = "*"
+        document.getElementById("urdu-m").classList.remove('text-xxxs')
+        document.getElementById("urdu-m").classList.add('text-sm')
+    }, 1500)
 })
 
 document.querySelectorAll('.grid > div').forEach(box => {
@@ -128,10 +146,15 @@ document.querySelectorAll('.text-5xl > span').forEach(letter => {
     letter.addEventListener('mouseenter', () => {
         letter.classList.remove('yarndings-20-regular')                         // if we use toggle, adds class if not present, otherwise removes
         letter.classList.add('jomhuria-regular', 'uppercase', 'scale-120')
+        setTimeout(function(){
+            // empty function to elapse the 2s timeout
+        }, 2000)
     })
     letter.addEventListener('mouseleave', () => {
-        letter.classList.remove('jomhuria-regular', 'uppercase', 'scale-120')
-        letter.classList.add('yarndings-20-regular')
+        setTimeout(function(){
+            letter.classList.remove('jomhuria-regular', 'uppercase', 'scale-120')
+            letter.classList.add('yarndings-20-regular')
+        }, 2000)
     })
 })
 
