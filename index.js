@@ -100,23 +100,54 @@ document.getElementById("urdu-m").addEventListener("mouseleave", function(){
 
 document.querySelectorAll('.grid > div').forEach(box => {
     box.addEventListener('mouseenter', () => {
-        box.classList.add('scale-105', 'transition-transform');
+        box.classList.add('scale-105', 'transition-transform')
     })
     box.addEventListener('mouseleave', () => {
-        box.classList.remove('scale-105', 'transition-transform');
+        box.classList.remove('scale-105', 'transition-transform')
     })
 })
 
 document.querySelectorAll('.group').forEach(header => {     // cool bounce animation for the lil guy
     header.addEventListener('mouseenter', () => {
-      const icon = header.querySelector('img');
-      icon.classList.add('animate-bounce');
-    });
+      const icon = header.querySelector('img')
+      icon.classList.add('animate-bounce')
+    })
     header.addEventListener('mouseleave', () => {
-      const icon = header.querySelector('img');
-      icon.classList.remove('animate-bounce');
-    });
-  });
+      const icon = header.querySelector('img')
+      icon.classList.remove('animate-bounce')
+    })
+  })
+
+document.getElementById("mil").addEventListener("mouseenter", function(){
+    this.classList.add('animate-pulse')
+    setTimeout(function(){}, 1000)
+})
+
+document.getElementById("mil").addEventListener("mouseleave", function(){
+    setTimeout(function(){
+        document.getElementById("mil").classList.remove('animate-pulse')
+    }, 1000)
+})
+
+document.getElementById("res").addEventListener("mouseenter", function(){
+    this.classList.add('animate-pulse')
+    setTimeout(function(){}, 1000)
+})
+
+document.getElementById("res").addEventListener("mouseleave", function(){
+    setTimeout(function(){ 
+        document.getElementById("res").classList.remove('animate-pulse') }, 
+    1000)
+})
+
+document.getElementById("src").addEventListener("mouseenter", function(){
+    this.classList.add('animate-spin')
+})
+
+document.getElementById("src").addEventListener("mouseleave", function(){
+    document.getElementById("src").classList.remove('animate-spin') 
+
+})
 
 // document.querySelectorAll('.flex > span').forEach(icon => {               // not working for some odd reason
 //     icon.addEventListener('mouseenter', () => {
@@ -135,10 +166,10 @@ document.querySelectorAll('.group').forEach(header => {     // cool bounce anima
 
 document.querySelectorAll('.grid > a').forEach(box => {
     box.addEventListener('mouseenter', () => {
-        box.classList.add('scale-105', 'transition-transform');
+        box.classList.add('scale-105', 'transition-transform')
     })
     box.addEventListener('mouseleave', () => {
-        box.classList.remove('scale-105', 'transition-transform');
+        box.classList.remove('scale-105', 'transition-transform')
     })
 })
 
@@ -160,7 +191,7 @@ document.querySelectorAll('.text-5xl > span').forEach(letter => {
 
 document.querySelectorAll(".nav-link").forEach(link => {
     link.addEventListener("click", function(e){              // to prevent the default skip event
-        e.preventDefault();
+        e.preventDefault()
         document.querySelector(link.getAttribute('href')).scrollIntoView({behavior: 'smooth'})
     })
 })
