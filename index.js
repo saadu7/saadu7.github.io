@@ -111,33 +111,35 @@ document.querySelectorAll('.group').forEach(header => {     // cool bounce anima
     header.addEventListener('mouseenter', () => {
       const icon = header.querySelector('img')
       icon.classList.add('animate-bounce')
+      
     })
     header.addEventListener('mouseleave', () => {
-      const icon = header.querySelector('img')
-      icon.classList.remove('animate-bounce')
+        const icon = header.querySelector('img')
+        icon.classList.remove('animate-bounce')
+ 
     })
   })
 
+  
+
 document.getElementById("mil").addEventListener("mouseenter", function(){
     this.classList.add('animate-pulse')
-    setTimeout(function(){}, 1000)
 })
 
 document.getElementById("mil").addEventListener("mouseleave", function(){
     setTimeout(function(){
         document.getElementById("mil").classList.remove('animate-pulse')
-    }, 1000)
+    }, 1500)
 })
 
 document.getElementById("res").addEventListener("mouseenter", function(){
     this.classList.add('animate-pulse')
-    setTimeout(function(){}, 1000)
 })
 
 document.getElementById("res").addEventListener("mouseleave", function(){
     setTimeout(function(){ 
         document.getElementById("res").classList.remove('animate-pulse') }, 
-    1000)
+    1500)
 })
 
 document.getElementById("src").addEventListener("mouseenter", function(){
@@ -177,9 +179,6 @@ document.querySelectorAll('.text-5xl > span').forEach(letter => {
     letter.addEventListener('mouseenter', () => {
         letter.classList.remove('yarndings-20-regular')                         // if we use toggle, adds class if not present, otherwise removes
         letter.classList.add('jomhuria-regular', 'uppercase', 'scale-120')
-        setTimeout(function(){
-            // empty function to elapse the 2s timeout
-        }, 2000)
     })
     letter.addEventListener('mouseleave', () => {
         setTimeout(function(){
