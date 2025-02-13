@@ -52,20 +52,20 @@ document.getElementById("ml").addEventListener("mouseleave", function(){
 
 
 
-document.getElementById("git").addEventListener("click", function(){
-    document.getElementById("git").classList.remove('scale-120', 'transition-transform')
-    document.getElementById("git").classList.remove('text-[#6487B1]', 'transition-colors')
-})
+// document.getElementById("git").addEventListener("click", function(){
+//     document.getElementById("git").classList.remove('scale-120', 'transition-transform')
+//     document.getElementById("git").classList.remove('text-[#6487B1]', 'transition-colors')
+// })
 
-document.getElementById("lnk").addEventListener("click", function(){
-    document.getElementById("lnk").classList.add('scale-120', 'transition-transform')
-    document.getElementById("lnk").classList.add('text-[#6487B1]', 'transition-colors')
-})
+// document.getElementById("lnk").addEventListener("click", function(){
+//     document.getElementById("lnk").classList.add('scale-120', 'transition-transform')
+//     document.getElementById("lnk").classList.add('text-[#6487B1]', 'transition-colors')
+// })
 
-document.getElementById("ml").addEventListener("click", function(){
-    document.getElementById("ml").classList.add('scale-120', 'transition-transform')
-    document.getElementById("ml").classList.add('text-[#6487B1]', 'transition-colors')
-})
+// document.getElementById("ml").addEventListener("click", function(){
+//     document.getElementById("ml").classList.add('scale-120', 'transition-transform')
+//     document.getElementById("ml").classList.add('text-[#6487B1]', 'transition-colors')
+// })
 
 
 document.getElementById("yarndings-m").addEventListener("mouseenter", function(){

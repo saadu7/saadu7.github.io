@@ -7,7 +7,7 @@
         <script src = "https://cdn.tailwindcss.com"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">             <!-- for google fonts API-->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Molle&family=Qahiri&family=Yarndings+20&family=Yeseva+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Molle&family=Qahiri&family=Yarndings+20&family=Yeseva+One&family=VT323&display=swap" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -50,6 +50,11 @@
         }
         .yeseva-one-regular {
             font-family: "Yeseva One", serif;
+            font-weight: 400;
+            font-style: normal;
+         }
+         .vt323-regular {
+            font-family: "VT323", serif;
             font-weight: 400;
             font-style: normal;
          }
@@ -143,21 +148,33 @@
 
         <br> <br> <br> <br> <br> <br> <br> <br> <br>    <!-- sections -->
         <div class = "min-h-screen bg-[#C5C2BC]">
+
             <section id = "about-me" class = "h-screen flex flex-col justify-start items-center bg-[#011f48] pt-8">
                 <h1 class = "text-[#C5C2BC] text-7xl jomhuria-regular italic"> ABOUT ME </h1>
             </section>
+            <br>
+            <img src="mnt1.svg" class="absolute bottom-0 left-0 w-full" alt="Mountain Divider">
+
             <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
             <section id = "skills" class = "h-screen flex flex-col justify-start items-center bg-[#03396c] pt-8">
                 <h1 class = "text-[#C5C2BC] text-7xl jomhuria-regular italic"> SKILLS </h1>
             </section>
+            <img src="mnt2.svg" class="absolute bottom-0 left-0 w-full" alt="Mountain Divider2">
+
             <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
             <section id = "projects" class = "h-screen flex flex-col justify-start items-center bg-[#005B96] pt-8">
                 <h1 class = "text-[#C5C2BC] text-7xl jomhuria-regular italic"> PROJECTS </h1>
             </section>
+            <img src="mnt1.svg" class="absolute bottom-0 left-0 w-full" alt="Mountain Divider3">
+
             <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
             <section id = "experience" class = "h-screen flex flex-col justify-start items-center bg-[#6487B1] pt-8">
                 <h1 class = "text-[#C5C2BC] text-7xl jomhuria-regular italic"> EXPERIENCE </h1>
             </section>
+            
             <br> <br> <br> 
         </div>
 
@@ -165,14 +182,12 @@
             <div class = "flex flex-col justify-between items-center space-y-4 ml-8">
                 <a href = "mailto:sau1@sfu.ca" target = "_blank"><i id = "ml" data-lucide="mail" class="w-16 h-16 text-[#0A0936] cursor-pointer"></i></a>
                 <h2 class = "text-white text-7xl jomhuria-regular">Contact for any inquiries</h2>
-                <a href = "mailto:sau1@sfu.ca" target = "_blank"><i id = "ml" data-lucide="file" class="w-16 h-16 text-[#0A0936] cursor-pointer"></i></a>
+                <a href = "images/RESUMEexpPDF.pdf" target = "_blank"><i id = "ml" data-lucide="file" class="w-16 h-16 text-[#0A0936] cursor-pointer"></i></a>
                 <h2 class = "text-white text-7xl jomhuria-regular"> Resume</h2>
                 <br>
-                <p class = "text-white molle-regular-italic">developed By Saad Usmani</p>
-                <div class = "grid grid-cols-2 gap-4">
-                    <p class = "text-white molle-regular-italic">source code</p>
-                    <a href = "mailto:sau1@sfu.ca" target = "_blank"><i id = "ml" data-lucide="github" class="w-4 h-4 text-[#0A0936] cursor-pointer"></i></a>
-                </div>
+                <p class = "text-white vt323-regular">developed By Saad Usmani, source code below</p>
+                <a href = "https://github.com/saadu7/saadu7.github.io" target = "_blank"><i id = "ml" data-lucide="git-commit-vertical" class="w-8 h-8 text-[#0A0936] cursor-pointer"></i></a>
+                <br>
             </div>
         </div>
 
