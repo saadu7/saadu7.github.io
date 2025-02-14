@@ -18,7 +18,7 @@
                 theme: {
                     extend: {
                         backgroundImage: {
-                            'pattern': "url('images/oriental.png')",
+                            'pattern': "url('images/oriental.svg')",
                         },
                         fontSize: {
                             'xxxs': '0.5rem', 
@@ -28,6 +28,9 @@
             }
         </script>
         <style>
+        html{
+            scroll-behavior: smooth;              /* easier way of implementing smooth scroll */
+        }
             .qahiri-regular {                     /* font for name */
             font-family: "Qahiri", serif;
             font-weight: 400;
@@ -58,6 +61,20 @@
             font-weight: 400;
             font-style: normal;
          }
+
+         .stagger-item {
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .stagger-item.hidden-left {
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+
+        .stagger-item.hidden-right {
+            opacity: 0;
+            transform: translateX(100px);
+        }
         </style>
     </head>
     <body class = "bg-[#C5C2BC]">
@@ -82,7 +99,6 @@
 
             <br><br><br>
 
-            <div class = "h-12 my-10 bg-pattern bg-repeat-x bg-auto" hidden></div>
 
             <div class = "flex justify-between items-center">  <!-- main section header -->
                 <div class = "relative flex-grow">             <!-- chapters-->
@@ -146,14 +162,37 @@
 
         </header>
 
-        <br> <br> <br> <br> <br> <br> <br> <br> <br>    <!-- sections -->
+        <div class = "h-auto my-12 bg-pattern bg-repeat-x bg-auto"  hidden></div>
+
+        <br> <br> <br> <br> <br> <br> <br> <br>   <!-- sections -->
         <div class = "min-h-screen bg-[#C5C2BC]">
 
             <div class="relative">
-                <section id = "about-me" class = "h-screen flex flex-col justify-start items-center bg-[#011f48] pt-8">
-                    <h1 class = "text-[#C5C2BC] text-7xl jomhuria-regular italic"> ABOUT ME </h1>
+                <section id="about-me" class="h-screen flex flex-col justify-start items-center bg-[#011f48] pt-16 py-20 overflow-hidden">
+                    <h1 class="text-[#C5C2BC] text-7xl jomhuria-regular italic items-center"> ABOUT ME </h1>
+                    <div class="container mx-auto px-4">
+                        <div class="flex flex-col md:flex-row items-center justify-between">
+                            <div class="md:w-1/2 text-[#C5C2BC] stagger-item hidden-left" data-delay="0">
+                                <div class="flex justify-center items-center space-x-4 space-x-4">  
+                                    <i id = "sun" data-lucide="sun" class="w-16 h-16 text-[#C5C2BC] cursor-pointer"></i>
+                                    <i id = "moon" data-lucide="moon" class="w-16 h-16 text-[#C5C2BC] cursor-pointer"></i>
+                                </div>
+                                <br><br>
+                                <p class="text-lg mb-4 vt323-regular" id = "bio">
+                                    Hello! I am Saad Usmani, a curious 2nd year CS major at SFU, who has a firey passion for the world of software development. <br><br>
+                                    I fell in love with computer programming in high school when I first encountered it, leading me to a creative world of endless possibilities, 
+                                    accompanied with the aspect of crafting solutions to solve real-world problems, and as a whole, contribute to making the world a better place. <br><br>
+                                    The things I have a particular interest in within this universe of expertise is machine learning, cybersecurity, as well as operating systems.
+                                </p>
+                            </div>
+                            <div class="md:w-1/2 mt-8 md:mt-0 stagger-item hidden-left" data-delay="500">
+                                <img src="images/pixel.png" alt="Profile picture" class="rounded-2xl mx-auto w-64 h-64 object-cover">
+                            </div>
+                        </div>
+                    </div>
                 </section>
-                <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+                
+                <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
                 <img src="images/mnt1.svg" class="absolute bottom-0 left-0 w-full h-auto" alt="Mountain Divider">
             </div>
 
@@ -161,7 +200,7 @@
                 <section id = "skills" class = "h-screen flex flex-col justify-start items-center bg-[#03396c] pt-16">
                     <h1 class = "text-[#C5C2BC] text-7xl jomhuria-regular italic"> SKILLS </h1>
                 </section>
-                <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+                <br> <br> <br> <br> <br> <br> <br> <br> 
                 <img src="images/mnt2.svg" class="absolute bottom-0 left-0 w-full" alt="Mountain Divider2">
             </div>
 
@@ -169,14 +208,16 @@
                 <section id = "projects" class = "h-screen flex flex-col justify-start items-center bg-[#005B96] pt-16">
                     <h1 class = "text-[#C5C2BC] text-7xl jomhuria-regular italic"> PROJECTS </h1>
                 </section>
-                <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+                <br> <br> <br> <br> <br> <br> <br> <br> 
                 <img src="images/mnt1.svg" class="absolute bottom-0 left-0 w-full" alt="Mountain Divider3">
             </div>
 
-            <section id = "experience" class = "h-screen flex flex-col justify-start items-center bg-[#6487B1] pt-8">
-                <h1 class = "text-[#C5C2BC] text-7xl jomhuria-regular italic"> EXPERIENCE </h1>
-            </section>
-
+            <div class="relative">
+                <section id = "experience" class = "h-screen flex flex-col justify-start items-center bg-[#6487B1] pt-8">
+                    <h1 class = "text-[#C5C2BC] text-7xl jomhuria-regular italic"> EXPERIENCE </h1>
+                </section>
+                <img src="images/river.svg" class="absolute bottom-0 left-0 w-full" alt="Mountain Divider3">
+            </div>
             <br> <br> <br> 
         </div>
 

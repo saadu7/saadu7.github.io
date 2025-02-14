@@ -188,13 +188,64 @@ document.querySelectorAll('.text-5xl > span').forEach(letter => {
     })
 })
 
-document.querySelectorAll(".nav-link").forEach(link => {
-    link.addEventListener("click", function(e){              // to prevent the default skip event
-        e.preventDefault()
-        document.querySelector(link.getAttribute('href')).scrollIntoView({behavior: 'smooth'})
-    })
-})
-
 // document.querySelector("#audio").addEventListener("click", function(){
     
 // })
+
+const staggerItems = document.querySelectorAll(".stagger-item")
+
+const observer = new IntersectionObserver((entries) => {    // intersectionObserver, refer to the fireship vid
+    entries.forEach(entry => { 
+        if (entry.isIntersecting) {    // basicalyl checks if the element of interest is currently intersecting with the users viewport
+            staggerItems.forEach(item => {
+                setTimeout(() => {
+                    item.classList.remove('hidden-left', 'hidden-right')}
+                    , parseInt(item.dataset.delay))
+                })
+            } else {
+                staggerItems.forEach( item => {
+                    if (item.classList.contains('hidden-left') || item.classList.contains('hidden-right')) return
+
+                    setTimeout( () => {
+                        if (item.getBoundingClientRect().left < window.innerWidth / 2) {
+                            item.classList.add('hidden-left')
+                        } else {
+                            item.classList.add('hidden-right')
+                        }
+                    }, parseInt(item.dataset.delay))
+                })
+            } 
+        } )
+}, {threshold: 0.1})   
+
+observer.observe(document.getElementById("about-me"))
+
+document.getElementById("moon").addEventListener("mouseenter", () => {
+    this.classList.add('scale-120', 'transition-transform')
+})
+
+document.getElementById("moon").addEventListener("mouseleave", () => {
+    this.classList.remove("scale-120", "transition-transform")
+})
+
+document.getElementById("sun").addEventListener("mouseenter", () => {
+    this.classList.add("scale-120", "transition-transform")
+})
+
+document.getElementById("sun").addEventListener("mouseleave", () => {
+    this.classList.remove("scale-120", "transition-transform")
+    
+})
+
+document.getElementById("moon").addEventListener("click", () => {
+    document.getElementById("bio").innerHTML = `When I am not coding, I love immersing myself in nature,  from peaceful walks to adventurous hikes (as you will notice with the imagery :) ) <br> <br >
+                                        Traveling and experiencing different places along with the cultures also fuel my curiosity about the world. I'm also an avid enjoyer of the arts, with a deep appreciation
+                                      for cinema and music, especially the soulful rhythms of jazz. These passions shape who I am and continuously enrich my life. <br> <br> <br> <br> `
+})
+
+document.getElementById("sun").addEventListener("click", () => {
+    document.getElementById("bio").innerHTML = `Hello! I am Saad Usmani, a curious 2nd year CS major at SFU, who has a firey passion for the world of software development. <br><br>
+    I fell in love with computer programming in high school when I first encountered it, leading me to a creative world of endless possibilities, 
+    accompanied with the aspect of crafting solutions to solve real-world problems, and as a whole, contribute to making the world a better place. <br><br>
+    The things I have a particular interest in within this universe of expertise is machine learning, cybersecurity, as well as operating systems.`
+})
