@@ -75,6 +75,28 @@
             opacity: 0;
             transform: translateX(100px);
         }
+
+        @keyframes carousel {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .animate-carousel {
+            animation: carousel 30s linear infinite;
+        }
+
+        @keyframes bounce-center {               /* updated bounce animation, to fix alignment issue*/
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+
+        .animate-bounce-center {
+            animation: bounce-center 0.6s infinite;
+        }
         </style>
     </head>
     <body class = "bg-[#C5C2BC]">
@@ -85,7 +107,7 @@
                 <div class = "relative">
                     <p id = "yarndings-m" class = "text-[#011f48] text-sm yeseva-one-regular">*</p>
                     <br>
-                    <h1 class = "gap-8 text-white text-5xl yarndings-20-regular"> <span class = "msg">w</span>&nbsp;<span class = "msg">e</span>&nbsp;<span class = "msg">l</span>&nbsp;<span class = "msg">c</span>&nbsp;<span class = "msg">o</span>&nbsp;<span class = "msg">m</span>&nbsp;<span class = "msg">e</span></h1>
+                    <h1 class = "gap-8 text-[#A4C4EB] text-5xl yarndings-20-regular"> <span class = "msg">w</span>&nbsp;<span class = "msg">e</span>&nbsp;<span class = "msg">l</span>&nbsp;<span class = "msg">c</span>&nbsp;<span class = "msg">o</span>&nbsp;<span class = "msg">m</span>&nbsp;<span class = "msg">e</span></h1>
                 </div>
                 
                 <div class = "relative">
@@ -185,8 +207,10 @@
                                     The things I have a particular interest in within this universe of expertise is machine learning, cybersecurity, as well as operating systems.
                                 </p>
                             </div>
-                            <div class="md:w-1/2 mt-8 md:mt-0 stagger-item hidden-left" data-delay="500">
+                            <div class="md:w-1/2 mt-8 md:mt-0 stagger-item hidden-left items-center flex flex-col justify-between data-delay="500">
                                 <img src="images/pixel.png" alt="Profile picture" class="rounded-2xl mx-auto w-64 h-64 object-cover">
+                                <br>
+                                <p class = "text-[#C5C2BC] text-sm vt323-regular">click on the moon, for the other side of me ;) </p>
                             </div>
                         </div>
                     </div>
@@ -197,8 +221,21 @@
             </div>
 
             <div class="relative">
-                <section id = "skills" class = "h-screen flex flex-col justify-start items-center bg-[#03396c] pt-16">
+                <section id = "skills" class = "h-screen flex flex-col justify-start items-center bg-[#03396c] pt-16 overflow-hidden">
                     <h1 class = "text-[#C5C2BC] text-7xl jomhuria-regular italic"> SKILLS </h1>
+                    <br>
+                    <div class = 'max-w-[80%] mx-auto'>
+                        <p class="text-lg text-[#C5C2BC] mb-4 vt323-regular items-center">
+                            These are some of the skills I have picked up along the way on this beautiful coding journey. Included are languages, the favourite of mine being C++ ! as well as  
+                            many frameworks and software I have grown accustomed to. I am more than eager to learn many more useful tools to better equip myself as a developer but I am proud of
+                            how far I have come along, from making small games on the console Python on repl.it to developing scalable full-stack applications!
+                        </p>
+                    </div>
+                    <br> 
+                    <div class="w-full overflow-hidden">
+                        <div class = 'flex animate-carousel' id = 'skills-c'>
+                        </div>
+                    </div>
                 </section>
                 <br> <br> <br> <br> <br> <br> <br> <br> 
                 <img src="images/mnt2.svg" class="absolute bottom-0 left-0 w-full" alt="Mountain Divider2">
@@ -218,21 +255,21 @@
                 </section>
                 <img src="images/river.svg" class="absolute bottom-0 left-0 w-full" alt="Mountain Divider3">
             </div>
-            <br> <br> <br> 
         </div>
 
-        <div>         <!-- footer-->
-            <div class = "flex flex-col justify-between items-center space-y-4 ml-8">
-                <a href = "mailto:sau1@sfu.ca" target = "_blank" id = "mil"><i data-lucide="mail" class="w-16 h-16 text-[#0A0936] cursor-pointer"></i></a>
-                <h2 class = "text-white text-7xl jomhuria-regular">Contact for any inquiries</h2>
-                <a href = "images/RESUMEexpPDF.pdf" target = "_blank" id = "res"><i data-lucide="file" class="w-16 h-16 text-[#0A0936] cursor-pointer"></i></a>
-                <h2 class = "text-white text-7xl jomhuria-regular"> Resume</h2>
-                <br>
-                <p class = "text-white vt323-regular">developed By Saad Usmani, source code below</p>
-                <a href = "https://github.com/saadu7/saadu7.github.io" target = "_blank" id="src"><i data-lucide="git-commit-vertical" class="w-8 h-8 text-[#0A0936] cursor-pointer"></i></a>
-                <br>
-            </div>
+        <!-- footer-->
+        <div class = " bg-[#9C9077] flex flex-col justify-between items-center space-y-4 w-full">
+            <br> <br> <br> 
+            <a href = "mailto:sau1@sfu.ca" target = "_blank" id = "mil"><i data-lucide="mail" class="w-16 h-16 text-[#0A0936] cursor-pointer"></i></a>
+            <h2 class = "text-white text-7xl jomhuria-regular">Contact for any inquiries</h2>
+            <a href = "images/RESUMEexpPDF.pdf" target = "_blank" id = "res"><i data-lucide="file" class="w-16 h-16 text-[#0A0936] cursor-pointer"></i></a>
+            <h2 class = "text-white text-7xl jomhuria-regular"> Resume</h2>
+            <br>
+            <p class = "text-white vt323-regular">developed By Saad Usmani, source code below</p>
+            <a href = "https://github.com/saadu7/saadu7.github.io" target = "_blank" id="src"><i data-lucide="git-commit-vertical" class="w-8 h-8 text-[#0A0936] cursor-pointer"></i></a>
+            <br>
         </div>
+    
 
 
 

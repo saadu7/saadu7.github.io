@@ -110,12 +110,12 @@ document.querySelectorAll('.grid > div').forEach(box => {
 document.querySelectorAll('.group').forEach(header => {     // cool bounce animation for the lil guy
     header.addEventListener('mouseenter', () => {
       const icon = header.querySelector('img')
-      icon.classList.add('animate-bounce')
+      icon.classList.add('animate-bounce-center')
       
     })
     header.addEventListener('mouseleave', () => {
         const icon = header.querySelector('img')
-        icon.classList.remove('animate-bounce')
+        icon.classList.remove('animate-bounce-center')
  
     })
   })
@@ -234,7 +234,7 @@ document.getElementById("sun").addEventListener("mouseenter", () => {
 
 document.getElementById("sun").addEventListener("mouseleave", () => {
     this.classList.remove("scale-120", "transition-transform")
-    
+
 })
 
 document.getElementById("moon").addEventListener("click", () => {
@@ -249,3 +249,28 @@ document.getElementById("sun").addEventListener("click", () => {
     accompanied with the aspect of crafting solutions to solve real-world problems, and as a whole, contribute to making the world a better place. <br><br>
     The things I have a particular interest in within this universe of expertise is machine learning, cybersecurity, as well as operating systems.`
 })
+
+const skills = [ {name: 'Python', logo: 'images/python.svg'}, 
+    {name: 'C', logo: 'images/c.svg'}, 
+    {name: 'C++', logo: 'images/cpp.svg'}, 
+    {name: 'JavaScript', logo: 'images/js.svg'}, 
+    {name: 'React', logo: 'images/react.svg'}, 
+    {name: 'Node.js', logo: 'images/node.svg'}, 
+    {name: 'SQLite', logo: 'images/sql.svg'}, 
+    {name: 'R', logo: 'images/r.svg'}, 
+    {name: 'TypeScript', logo: 'images/ts.svg'}, 
+    {name: 'MatLab', logo: 'images/matlab.svg'}, 
+    {name: 'HTML', logo: 'images/html.svg'}, 
+    {name: 'CSS', logo: 'images/css.svg'}, 
+    {name: 'Keras', logo: 'images/keras.svg'}, 
+    {name: 'TensorFlow', logo: 'images/tf.svg'}, 
+    {name: 'Flask', logo: 'images/flask.svg'}, 
+    {name: 'Docker', logo: 'images/docker.svg'}, 
+    {name: 'C#', logo: 'images/csh.png'}
+] // array of skill objects
+
+const skillsCarousel = document.getElementById("skills-c")
+skillsCarousel.innerHTML = skills.concat(skills).map(skill =>` <div class="flex flex-col items-center justify-center bg-[#C5C2BC] rounded-lg shadow-lg p-6 mx-4 w-40 h-40 flex-shrink-0">
+                <img src="${skill.logo}" alt="${skill.name} logo" class="w-16 h-16 mb-4">
+                <p class="text-[#03396c] text-center font-semibold vt323-regular">${skill.name}</p>
+            </div> `).join('')
